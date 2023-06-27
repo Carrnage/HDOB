@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Converter">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="438dp"
+        app:layout_constraintBottom_toTopOf="@+id/hexadecimal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:id="@+id/hexadecimal"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:digits="0123456789ABCDEF"
+        android:ems="10"
+        android:hint="@string/hexadecimal"
+        android:inputType="textCapCharacters"
+        app:layout_constraintBottom_toTopOf="@+id/decimal"
+        app:layout_constraintEnd_toStartOf="@+id/radiogroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/octal"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:digits="01234567"
+        android:ems="10"
+        android:hint="@string/octal"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/binary"
+        app:layout_constraintEnd_toStartOf="@+id/radiogroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/decimal"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/decimal"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:digits="0123456789"
+        android:ems="10"
+        android:hint="@string/decimal"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/octal"
+        app:layout_constraintEnd_toStartOf="@+id/radiogroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hexadecimal"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/binary"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:digits="01"
+        android:ems="10"
+        android:hint="@string/binary"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/converterButton"
+        app:layout_constraintEnd_toStartOf="@+id/radiogroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/octal"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="232dp"
+        app:layout_constraintBottom_toTopOf="@+id/converterButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView">
+
+        <RadioButton
+            android:id="@+id/hexadecimalradio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+ />
+
+        <RadioButton
+            android:id="@+id/decimalradio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+/>
+
+        <RadioButton
+            android:id="@+id/octalradio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+/>
+
+        <RadioButton
+            android:id="@+id/binaryradio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+ />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/converterButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/convert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

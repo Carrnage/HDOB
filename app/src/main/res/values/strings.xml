@@ -1,8 +1,13 @@
 <resources>
     <string name="app_name">HDOB</string>
-    <string name="calculator">Calculator</string>
+    <string name="converter">Converter</string>
     <string name="game">Game</string>
     <string name="scores">Scoreboard</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
+    <string name="hexadecimal">Hexadecimal</string>
+    <string name="decimal">Decimal</string>
+    <string name="octal">Octal</string>
+    <string name="binary">Binary</string>
+    <string name="convert">Convert</string>
 </resources>

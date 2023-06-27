@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:shadowColor="@color/green_700"
+            android:shadowColor="@color/green_900"
             android:shadowDx="3"
             android:shadowDy="3"
             android:shadowRadius="3"
@@ -36,15 +36,17 @@
     </FrameLayout>
 
     <Button
-        android:id="@+id/calculatorButton"
+        android:id="@+id/converterButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/calculator"
+        android:text="@string/converter"
         app:layout_constraintBottom_toTopOf="@+id/gameButton"
         app:layout_constraintEnd_toEndOf="@+id/gameButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/gameButton"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+        android:onClick="OnConverterClick"
+        />
     <Button
         android:id="@+id/gameButton"
         android:layout_width="wrap_content"
@@ -54,7 +56,7 @@
         app:layout_constraintEnd_toEndOf="@+id/scoreButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/scoreButton"
-        app:layout_constraintTop_toBottomOf="@+id/calculatorButton" />
+        app:layout_constraintTop_toBottomOf="@+id/converterButton" />
     <Button
         android:id="@+id/scoreButton"
         android:layout_width="wrap_content"
